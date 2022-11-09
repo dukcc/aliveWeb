@@ -17,14 +17,19 @@ export default function Page() {
         Apply to join at our Discord.
 			</p>
 		</div>
-		<div className="bg-black bg-cover bg-center text-white h-[250rem] place-items-center">
-      <Link href="https://discord.gg/jazHytWPNw" className="bg-black">
-        <div className="w-[50rem] h-[25rem] bg-[#5170ef] p-10 m-3">
-          <h1 className="text-5xl font-bold">
-            Join Our Discord
-          </h1>
+		<div className="bg-black bg-cover bg-center text-white h-[32rem] font-default p-3 grid grid-rows-1 grid-cols-2">
+      <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl mr-[0.375rem]">
+        <h1 className="text-5xl font-bold">About</h1>
+        <p className="text-xl pt-5">Alive is a fun, semi-vanilla SMP. To join, first join our Discord server, and apply. We have a claim plugin to prevent griefing, and shopkeepers to create player entitiy shops, and some datapacks from Vanilla Tweaks.</p>
+      </div>
+      <div className="bg-black bg-cover bg-center text-white h-[30rem] font-default grid grid-rows-1 grid-cols-2">
+        <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl mr-[0.375rem] ml-[0.375rem]">
+          <h1 className="text-5xl font-bold">Join our Discord</h1>
         </div>
-      </Link>
+        <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl ml-[0.375rem]">
+          <h1 className="text-5xl font-bold">Creators</h1>
+        </div>
+      </div>
 		</div>
 		</>
 	)

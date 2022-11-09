@@ -8,7 +8,7 @@ export default function RootLayout({ children }: {
   return (
     <html lang="en">
       <body>
-        <nav className="fixed bg-black/60 text-white backdrop-blur-sm w-[98vw] p-5 m-3 rounded-xl shadow-lg flex content-between align-middle">
+        <nav className="fixed bg-black/60 text-white backdrop-blur-md w-[98vw] p-5 m-3 rounded-xl shadow-lg flex content-between align-middle">
           <Image
             src="/logo.png"
             width={50}
