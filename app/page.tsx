@@ -1,7 +1,5 @@
-import Link from "next/link";
 
 export default function Page() {
-
 	return (
 		<>
     <head>
@@ -16,20 +14,12 @@ export default function Page() {
 				A fun, semi-vanilla Minecraft SMP.<br></br>
         Apply to join at our Discord.
 			</p>
-		</div>
-		<div className="bg-black bg-cover bg-center text-white h-[32rem] font-default p-3 grid grid-rows-1 grid-cols-2">
-      <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl mr-[0.375rem]">
-        <h1 className="text-5xl font-bold">About</h1>
-        <p className="text-xl pt-5">Alive is a fun, semi-vanilla SMP. To join, first join our Discord server, and apply. We have a claim plugin to prevent griefing, and shopkeepers to create player entitiy shops, and some datapacks from Vanilla Tweaks.</p>
-      </div>
-      <div className="bg-black bg-cover bg-center text-white h-[30rem] font-default grid grid-rows-1 grid-cols-2">
-        <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl mr-[0.375rem] ml-[0.375rem]">
-          <h1 className="text-5xl font-bold">Join our Discord</h1>
-        </div>
-        <div className="bg-[#101010] h-[28.5rem] p-8 rounded-xl ml-[0.375rem]">
-          <h1 className="text-5xl font-bold">Creators</h1>
-        </div>
-      </div>
+      <a href="https://discord.gg/jazHytWPNw" className="bg-[#101010] hover:bg-[#5865F2] transition-all duration-200 w-full text-2xl font-bold rounded-xl py-3 my-7">
+        Discord
+      </a>
+      <a href="https://map.alivesmp.xyz" className="bg-[#101010] hover:bg-[#0077fc] transition-all duration-200 w-full text-2xl font-bold rounded-xl py-3">
+        Map
+      </a>
 		</div>
 		</>
 	)
