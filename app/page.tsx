@@ -23,7 +23,10 @@ export default function Page() {
       	</a>
 	</div>
 	<div className="bg-black text-white h-[35rem] text-2xl align-middle justify-center grid place-content-center text-center">
-		Alive SMP is a fun, semi-vanilla SMP.<br></br>We have UltimateClaims to manage land, so players don't grief/steal.<br></br>We also have Shopkeepers to manage player shops, it will create entitys that act like villagers. <a target="_blank" className="text-blue-500" href="https://www.youtube.com/playlist?list=PLVyVthOY4xw8fd8rvXoUV1GPNWFbSSNmM">Tutorials for those plugins here.</a> To join, apply in our Discord server.
+		<h1 className="text-5xl font-bold py-5">About</h1>
+		<p className="w-[50vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[460px]:text-xl">
+		Alive SMP is a fun, semi-vanilla SMP. We have UltimateClaims to manage land, so players don't grief/steal. We also have Shopkeepers to manage player shops, it will create entities that act like villagers. <a target="_blank" className="text-blue-500" href="https://www.youtube.com/playlist?list=PLVyVthOY4xw8fd8rvXoUV1GPNWFbSSNmM">Tutorials for those plugins here.</a> To join, apply in our Discord server.
+		</p>
 	</div>
 	</>
 	)
