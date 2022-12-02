@@ -1,5 +1,16 @@
 
-export default function Page() {
+import Link from "next/link";
+
+async function getPosts() {
+	const res = await fetch('http://127.0.0.1:8090/api/collections/posts/records?page=1&perPage=30', { cache: 'no-store' });
+	const data = await res.json();
+	return data?.items as any[];
+}
+
+export default async function Page() {
+
+	const posts = await getPosts();
+
 	return (
 	<>
     <head>
@@ -22,6 +33,11 @@ export default function Page() {
         	Map
       	</a>
 	</div>
+	<div className=" bg-[#070707] h-full p-5 grid grid-cols-4 max-[1630px]:grid-cols-3 max-[1270px]:grid-cols-2 max-[850px]:grid-cols-1">
+		{posts?.map((post) => {
+			return <Post key={post.id} post={post} />
+		})}
+	</div>
 	<div className="bg-black text-white h-[35rem] text-2xl align-middle justify-center grid place-content-center text-center">
 		<h1 className="text-5xl font-bold py-5">About</h1>
 		<p className="w-[50vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[460px]:text-xl">
@@ -29,5 +45,25 @@ export default function Page() {
 		</p>
 	</div>
 	</>
+	)
+}
+
+
+function Post({ post }: any) {
+    let { id, title, headContent, mainContent, image, created } = post || {};
+
+	created = created.split(' ')[0];
+
+    return (
+		<>
+		<Link href={`/post/${id}`}>
+			<div className="bg-[#101010] text-white w-96 p-8 mb-20 rounded-xl hover:bg-[#151515] transition-all duration-200">
+				<img className="aspect-video rounded-lg mb-5 shadow-md shadow-black/5" src={image} alt="Image Header" />
+				<h2 className="text-3xl font-bold">{title}</h2>
+				<p className="text-lg">{headContent}</p>
+				<p className="text-[#666666]">{created}</p>
+			</div>
+		</Link>
+		</>
 	)
 }
