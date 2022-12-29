@@ -18,7 +18,7 @@ export default function RootLayout({ children }: {
               alt="Logo"
             />
           </Link>
-          <Link href="/" className="text-2xl pl-7 pt-2 font-default font-bold hover:text-blue-500 transition-all duration-200">Home</Link>
+          <Link href="/" className="text-2xl pl-7 pt-2 font-default font-bold hover:text-cyan-500 transition-all duration-200">Home</Link>
         </nav>
         {children}
       </body>
