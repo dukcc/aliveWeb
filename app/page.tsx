@@ -1,43 +1,207 @@
+import Link from "next/link";
+
+async function getPosts() {
+    const res = await fetch(
+        "http://127.0.0.1:8090/api/collections/posts/records?page=1&perPage=30",
+        { cache: "no-store" }
+    );
+    const data = await res.json();
+    return data?.items as any[];
+}
+
 export default async function Page() {
-	return (
-	<>
-    <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <title>Alive SMP: Home</title>
-    </head>
-	<div className="bg-[url('/bg.png')] bg-cover bg-fixed bg-center text-white h-screen align-middle justify-center grid place-content-center text-center">
-		<h1 className="text-7xl font-default font-bold max-[600px]:text-5xl">
-			Alive SMP
-		</h1>
-		<p className="text-xl font-default pt-3 max-[600px]:text-sm">
-			A fun, semi-vanilla Minecraft SMP.<br></br>
-        	Apply to join at our Discord.
-		</p>
-      	<a href="https://discord.gg/jazHytWPNw" className="bg-black/50 backdrop-blur-md hover:bg-[#5865F2] transition-all duration-200 w-full text-2xl font-bold rounded-xl py-3 my-7">
-        	Discord
-      	</a>
-      	<a href="https://map.alivesmp.xyz" className="bg-black/50 backdrop-blur-md hover:bg-cyan-500 transition-all duration-200 w-full text-2xl font-bold rounded-xl py-3">
-        	World Map
-      	</a>
-	</div>
-	<div className="bg-black text-white h-[35rem] text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
-		<h1 className="text-5xl font-bold py-5">About</h1>
-		<p className="w-[50vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[460px]:text-xl">
-		Alive SMP is a fun SMP. We have UltimateClaims to manage land, so players don't grief/steal. We also have Shopkeepers to manage player shops, it will create entities that act like villagers. <a target="_blank" className="text-cyan-500" href="https://www.youtube.com/playlist?list=PLVyVthOY4xw8fd8rvXoUV1GPNWFbSSNmM">Tutorials for those plugins here.</a> In the new Season 2 update, we have plenty new additions, we now have a leveling system which gives you perks when you level up, and more lives! This is semi-hardcore, when you reach certain levels you can earn more lives. We also have a new map, we havent decided if it will be a real life world map, or a custom generated Iris map. We might be adding more things soon though, S2 isn't out yet.. To join, and receive news, join and apply in our Discord server. 
-		</p>
-	</div>
-	<div className="bg-black text-white">
-		<div className="p-3 bg-neutral-900/50 border border-white/5 h-[35rem] px-56 text-2xl align-middle justify-center grid place-items-center text-center grid-rows-1 grid-cols-2 max-[910px]:grid-rows-2 max-[910px]:grid-cols-1 max-[910px]:px-0 max-[910px]:py-48">
-			<div className="">
-				<h1 className="text-5xl font-bold py-5">Worlds</h1>
-			</div>
-			<div className=" ">
-				<p className="inline-block pr-8 max-[910px]:pr-2">Alive Season 1</p>
-				<a href="https://drive.google.com/file/d/1UBMbbJdcRTdA4BIHBRoaa8wgwW6lkh8o/view?usp=sharing" className="underline text-cyan-500 inline-block">Download</a>
-			</div>
-		</div>
-	</div>
-	</>
-	)
+    const posts = await getPosts();
+
+    return (
+        <>
+            <head>
+                <link rel="icon" href="/logo.png" type="image/png" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+                />
+                <title>Alive SMP: Home</title>
+            </head>
+            <div className="bg-[url('/bg.png')] bg-cover bg-fixed bg-center text-white h-screen align-middle justify-center grid place-content-center text-center">
+                <h1 className="text-7xl font-default font-bold max-[600px]:text-5xl">
+                    Alive SMP
+                </h1>
+                <p className="text-xl font-default pt-3 max-[600px]:text-sm">
+                    A fun civilizations SMP.
+                </p>
+            </div>
+            <div className="bg-[#060606] text-white rounded-t-xl h-full text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
+                <div className="h-full w-full grid grid-cols-5 max-[1450px]:grid-cols-4 max-[1150px]:grid-cols-3 max-[1150px]:grid-cols-3 max-[850px]:grid-cols-2 max-[590px]:grid-cols-1">
+                    {posts?.map((post) => {
+                        return <Post key={post.id} post={post} />;
+                    })}
+                </div>
+            </div>
+            <div className="bg-black text-white h-full py-12 text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
+                <h1 className="text-7xl font-bold py-5 bg-gradient-to-r from-[#004b95] to-[#6fe7f9] inline-block text-transparent bg-clip-text">
+                    About
+                </h1>
+                <p className="w-[50vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[460px]:text-xl text-left">
+                    Alive SMP is a fun SMP. We have UltimateClaims to manage
+                    land, so players don't grief/steal. We also have Shopkeepers
+                    to manage player shops, it will create entities that act
+                    like villagers.{" "}
+                    <a
+                        target="_blank"
+                        className="text-cyan-500"
+                        href="https://www.youtube.com/playlist?list=PLVyVthOY4xw8fd8rvXoUV1GPNWFbSSNmM"
+                    >
+                        Tutorials for those plugins here.
+                    </a>{" "}
+                    In the new Season 2 update, we have plenty new additions, we
+                    now have a leveling system which gives you perks when you
+                    level up, and more lives! This is semi-hardcore, when you
+                    reach certain levels you can earn more lives. We also have a
+                    new map, we havent decided if it will be a real life world
+                    map, or a custom generated Iris map. We might be adding more
+                    things soon though, S2 isn't out yet.. To join, and receive
+                    news, join and apply in our Discord server.
+                </p>
+            </div>
+            <div className="bg-[#060606] text-white h-full py-16 max-[790px]:py-7 text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
+                <h1 className="text-7xl font-bold py-5 bg-gradient-to-r from-[#004b95] to-[#6fe7f9] inline-block text-transparent bg-clip-text max-[510px]:text-6xl max-[490px]:text-4xl">
+                    Modifications
+                </h1>
+                <h6 className="text-xl text-[#cfcfcf] pt-5 font-light max-[490px]:text-lg">
+                    Server running on Purpur 1.19.3 <br />
+                    And you don't have to install any of this, its on the
+                    server!
+                </h6>
+                <div className="grid grid-cols-2 grid-rows-1 pt-10 max-[790px]:grid-cols-1 max-[790px]:grid-rows-2">
+                    <div className="text-left px-5">
+                        <h3 className="text-3xl">Datapacks</h3>
+                        <h6 className="text-2xl text-[#acacac] pt-2 font-bold">
+                            World (Stardust Labs)
+                        </h6>
+                        <p className="w-[25vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[490px]:text-lg">
+                            Terralith - custom world gen <br />
+                            Incendium - custom nether gen <br />
+                            Nullscape - custom end gen <br />
+                            Structory - custom structures
+                        </p>
+                        <h6 className="text-2xl text-[#acacac] pt-5 font-bold">
+                            VanillaTweaks
+                        </h6>
+                        <p className="w-[25vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[490px]:text-lg">
+                            Unlock all recipies, Armor statues, Custom nether
+                            portals, Graves, Track raw statues, Workstation
+                            highlights, Coords hud, Nether portal coords,
+                            Pillager tools, Player head drops, Armored elytra,
+                            Double shulker shells, More mob heads, Wandering
+                            trades. <br />
+                            <b className="text-[#acacac]">
+                                {" "}
+                                Crafting Tweaks:{" "}
+                            </b>{" "}
+                            <br />
+                            Rotten flesh to leather, Coal/charcoal to black dye,
+                            Blackstone cobblestone, Straight to shapeless,
+                            Universal dyeing, More trapdoors, More bark, More
+                            bricks, More stairs, Craftable gravel, Craftable
+                            nametags, Craftable coral blocks (3x3), Craftable
+                            Blackstone, Unpackable wool.
+                        </p>
+                    </div>
+                    <div className="text-left px-5 max-[790px]:pt-10">
+                        <h3 className="text-3xl">Plugins</h3>
+                        <p className="w-[25vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[490px]:text-lg">
+                            BetterRTP (teleports you to somewhere random) <br />
+                            Coreprotect (can restore bases after griefed) <br />
+                            DiscordSRV (links discord and mc chats) <br />
+                            Essentials <br />
+                            Lands (claiming system) <br />
+                            Luckperms (ranks) <br />
+                            Orebfuscator (anti xray) <br />
+                            Shopkeepers (custom villagar shops for players){" "}
+                            <br />
+                            Smoothtimber (cuts down a tree at once) <br />
+                            Squaremap (online world map) <br />
+                            Timedrewards (diamond reward every 24hrs) <br />
+                            Veinminer (mine all ore at once) <br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-black text-white h-full py-24 px-56 text-2xl align-middle justify-center grid place-items-center text-center grid-rows-1 grid-cols-2 max-[910px]:grid-rows-2 max-[910px]:grid-cols-1 max-[910px]:px-0 max-[910px]:py-48">
+                <div className="">
+                    <h1 className="text-6xl font-bold py-5 bg-gradient-to-r from-[#0064c9] to-[#34ddf7] inline-block text-transparent bg-clip-text">
+                        Worlds
+                    </h1>
+                </div>
+                <div className=" ">
+                    <p className="inline-block pr-8 max-[910px]:pr-2">
+                        Alive Season 1
+                    </p>
+                    <a
+                        href="https://drive.google.com/file/d/1UBMbbJdcRTdA4BIHBRoaa8wgwW6lkh8o/view?usp=sharing"
+                        className="underline text-cyan-500 inline-block"
+                    >
+                        Download
+                    </a>
+                </div>
+            </div>
+            <div className="bg-[#060606] text-white h-full py-24 px-56 text-2xl align-middle justify-center grid place-items-center text-center grid-rows-2 grid-cols-1 max-[910px]:px-0 max-[910px]:py-48">
+                <div className="">
+                    <h1 className="text-6xl font-bold py-5 bg-gradient-to-r from-[#0064c9] to-[#34ddf7] inline-block text-transparent bg-clip-text">
+                        Socials
+                    </h1>
+                    <p className="text-xl w-96 max-[385px]:w-64 text-left">
+                        What are you waiting for? Join our discord and apply to
+                        get into the smp! While you're here, you might as well
+                        check out our socials!
+                    </p>
+                </div>
+                <div className=" ">
+                    <a
+                        href="https://discord.gg/9ve738vbrP"
+                        className="block p-3 m-5 w-56 bg-[#5662f6] rounded-xl hover:translate-y-1 active:scale-[0.99] transition-all duration-200 hover:bg-[#1f1f1f]"
+                        target="_blank"
+                    >
+                        Discord
+                    </a>
+                    <a
+                        href="https://map.alivesmp.xyz"
+                        className="block p-3 m-5 w-56 bg-[#33adff] rounded-xl hover:translate-y-1 active:scale-[0.99] transition-all duration-200 hover:bg-[#1f1f1f]"
+                        target="_blank"
+                    >
+                        World Map
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@alivesmp"
+                        className="block p-3 m-5 w-56 bg-[#ff0000] rounded-xl hover:translate-y-1 active:scale-[0.99] transition-all duration-200 hover:bg-[#1f1f1f]"
+                        target="_blank"
+                    >
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </>
+    );
+}
+
+function Post({ post }: any) {
+    const { id, title, headContent, image, mainContent } = post || {};
+
+    return (
+        <>
+            <Link href={`/post/${id}`}>
+                <div className="bg-[#dddddd] text-black rounded-xl hover:bg-[#d1d1d1] shadow-lg shadow-[#628ba9]/50 hover:shadow-[#628ba9]/90 m-5 transition-all duration-200 active:scale-[0.99] text-left h-[30rem]">
+                    <img
+                        src={image}
+                        alt="Image Header"
+                        className="rounded-t-xl aspect-video pb-5"
+                    />
+                    <div className="px-8 pb-8">
+                        <h1 className="text-4xl font-bold pb-2">{title}</h1>
+                        <p className="text-xl w-[90%]">{headContent}</p>
+                    </div>
+                </div>
+            </Link>
+        </>
+    );
 }
