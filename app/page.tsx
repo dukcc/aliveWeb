@@ -2,7 +2,7 @@ import Link from "next/link";
 
 async function getPosts() {
     const res = await fetch(
-        "http://127.0.0.1:8090/api/collections/posts/records?page=1&perPage=30",
+        "http://alivesmp.xyz:80/api/collections/posts/records?page=1&perPage=30",
         { cache: "no-store" }
     );
     const data = await res.json();

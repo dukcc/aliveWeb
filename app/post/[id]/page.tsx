@@ -1,6 +1,6 @@
 async function getPost(postId: string) {
     const res = await fetch(
-        `http://127.0.0.1:8090/api/collections/posts/records/${postId}`,
+        `http://alivesmp.xyz:80/api/collections/posts/records/${postId}`,
         {
             next: { revalidate: 10 },
         }
