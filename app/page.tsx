@@ -1,16 +1,12 @@
 import Link from "next/link";
+import getPostMetadata from "../components/getPostMetadata";
+import PostPreview from "../components/PostPreview";
 
-async function getPosts() {
-    const res = await fetch(
-        "http://alivesmp.xyz:80/api/collections/posts/records?page=1&perPage=30",
-        { cache: "no-store" }
-    );
-    const data = await res.json();
-    return data?.items as any[];
-}
-
-export default async function Page() {
-    const posts = await getPosts();
+export default function Page() {
+    const postMetadata = getPostMetadata();
+    const postPreviews = postMetadata.map((post) => (
+        <PostPreview key={post.slug} {...post} />
+    ))
 
     return (
         <>
@@ -30,11 +26,9 @@ export default async function Page() {
                     A fun civilizations SMP.
                 </p>
             </div>
-            <div className="bg-[#060606] text-white rounded-t-xl h-full text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
-                <div className="h-full w-full grid grid-cols-5 max-[1450px]:grid-cols-4 max-[1150px]:grid-cols-3 max-[1150px]:grid-cols-3 max-[850px]:grid-cols-2 max-[590px]:grid-cols-1">
-                    {posts?.map((post) => {
-                        return <Post key={post.id} post={post} />;
-                    })}
+            <div className="bg-[#060606] text-white rounded-t-xl h-full text-xl max-[540px]:text-lg text-center">
+                <div className="h-full w-full grid grid-cols-5 max-[1450px]:grid-cols-4 max-[1150px]:grid-cols-3 max-[850px]:grid-cols-2 max-[590px]:grid-cols-1">
+                    {postPreviews}
                 </div>
             </div>
             <div className="bg-black text-white h-full py-12 text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
@@ -42,25 +36,7 @@ export default async function Page() {
                     About
                 </h1>
                 <p className="w-[50vw] max-[850px]:w-[27rem] max-[460px]:w-[20rem] max-[460px]:text-xl text-left">
-                    Alive SMP is a fun SMP. We have UltimateClaims to manage
-                    land, so players don't grief/steal. We also have Shopkeepers
-                    to manage player shops, it will create entities that act
-                    like villagers.{" "}
-                    <a
-                        target="_blank"
-                        className="text-cyan-500"
-                        href="https://www.youtube.com/playlist?list=PLVyVthOY4xw8fd8rvXoUV1GPNWFbSSNmM"
-                    >
-                        Tutorials for those plugins here.
-                    </a>{" "}
-                    In the new Season 2 update, we have plenty new additions, we
-                    now have a leveling system which gives you perks when you
-                    level up, and more lives! This is semi-hardcore, when you
-                    reach certain levels you can earn more lives. We also have a
-                    new map, we havent decided if it will be a real life world
-                    map, or a custom generated Iris map. We might be adding more
-                    things soon though, S2 isn't out yet.. To join, and receive
-                    news, join and apply in our Discord server.
+                    Alive SMP is a fun civilizations SMP! The new world is gonna have custom world generation done by Stardust labs (Terralith, Incendium, Nullscape, and Structory), with a unique seed, there are now many more places to explore! We've changed the claiming plugin to Lands, so you can create nations, certain areas to players to create a town! You can also start wars with other nations. Lands uses economy, so we now have player shops, and you can trade out blocks with money at the spawn. There is also now a brand new skills plugin: Adapt! There are so many unique skills to the plugin, and when you level up you gain a life! Yes, this is semi-hardcore, you start with 1 life and can gain more by killing, leveling up, or crafting.
                 </p>
             </div>
             <div className="bg-[#060606] text-white h-full py-16 max-[790px]:py-7 text-xl max-[540px]:text-lg align-middle justify-center grid place-content-center text-center">
@@ -95,9 +71,8 @@ export default async function Page() {
                             Double shulker shells, More mob heads, Wandering
                             trades. <br />
                             <b className="text-[#acacac]">
-                                {" "}
-                                Crafting Tweaks:{" "}
-                            </b>{" "}
+                                Crafting Tweaks:
+                            </b>
                             <br />
                             Rotten flesh to leather, Coal/charcoal to black dye,
                             Blackstone cobblestone, Straight to shapeless,
@@ -115,14 +90,12 @@ export default async function Page() {
                             DiscordSRV (links discord and mc chats) <br />
                             Essentials <br />
                             Lands (claiming system) <br />
+                            Adapt (skills) <br />
                             Luckperms (ranks) <br />
                             Orebfuscator (anti xray) <br />
-                            Shopkeepers (custom villagar shops for players){" "}
-                            <br />
-                            Smoothtimber (cuts down a tree at once) <br />
+                            Shopkeepers (custom villagar shops for players) <br />
                             Squaremap (online world map) <br />
                             Timedrewards (diamond reward every 24hrs) <br />
-                            Veinminer (mine all ore at once) <br />
                         </p>
                     </div>
                 </div>
@@ -153,7 +126,9 @@ export default async function Page() {
                     <p className="text-xl w-96 max-[385px]:w-64 text-left">
                         What are you waiting for? Join our discord and apply to
                         get into the smp! While you're here, you might as well
-                        check out our socials!
+                        check out our socials! <br />
+                        <b>Applications:</b> <br />
+                        We are looking for dedicated players, no you dont have to be online 24/7 and build crazy projects but if you feel like you arent gonna play that much then dont apply. We also would love to have people that have good skills in building, redstone, or pvp.
                     </p>
                 </div>
                 <div className=" ">
@@ -180,28 +155,6 @@ export default async function Page() {
                     </a>
                 </div>
             </div>
-        </>
-    );
-}
-
-function Post({ post }: any) {
-    const { id, title, headContent, image, mainContent } = post || {};
-
-    return (
-        <>
-            <Link href={`/post/${id}`}>
-                <div className="bg-[#dddddd] text-black rounded-xl hover:bg-[#d1d1d1] shadow-lg shadow-[#628ba9]/50 hover:shadow-[#628ba9]/90 m-5 transition-all duration-200 active:scale-[0.99] text-left h-[30rem]">
-                    <img
-                        src={image}
-                        alt="Image Header"
-                        className="rounded-t-xl aspect-video pb-5"
-                    />
-                    <div className="px-8 pb-8">
-                        <h1 className="text-4xl font-bold pb-2">{title}</h1>
-                        <p className="text-xl w-[90%]">{headContent}</p>
-                    </div>
-                </div>
-            </Link>
         </>
     );
 }

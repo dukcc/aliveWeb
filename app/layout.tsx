@@ -11,7 +11,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="bg-black font-default overflow-x-hidden">
-                <nav className="fixed bg-black/60 text-white backdrop-blur-sm w-full z-50 p-5 rounded-b-xl shadow-lg flex place-content-between align-middle">
+                <nav className="fixed bg-[#101010]/60 text-white backdrop-blur-sm w-full z-50 p-5 rounded-b-xl shadow-lg flex place-content-between align-middle">
                     <Link href="/">
                         <Image
                             src="/logo.png"
