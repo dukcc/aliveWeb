@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                default: ['Montserrat'],
+                default: ['"Be Vietnam Pro"'],
             },
         },
     },
