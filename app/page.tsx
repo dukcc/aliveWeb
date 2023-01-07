@@ -16,14 +16,13 @@ export default function Page() {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
                 />
-                <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link></link></link>
                 <title>Alive SMP: Home</title>
             </head>
             <div className="bg-[url('/bg.png')] bg-cover bg-fixed bg-center text-white h-screen align-middle justify-center grid place-content-center text-center">
-                <h1 className="text-7xl font-default font-bold max-[600px]:text-5xl">
+                <h1 className="text-7xl font-sans font-bold max-[600px]:text-5xl">
                     Alive SMP
                 </h1>
-                <p className="text-xl font-default pt-3 max-[600px]:text-sm">
+                <p className="text-xl font-sans pt-3 max-[600px]:text-sm">
                     A fun civilizations SMP.
                 </p>
             </div>

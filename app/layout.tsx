@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="bg-black font-default overflow-x-hidden">
+            <body className="bg-black font-sans overflow-x-hidden">
                 <nav className="fixed bg-[#101010]/60 text-white backdrop-blur-sm w-full z-50 p-5 rounded-b-xl shadow-lg flex place-content-between align-middle">
                     <Link href="/">
                         <Image
@@ -22,7 +22,7 @@ export default function RootLayout({
                     </Link>
                     <Link
                         href="/"
-                        className="text-2xl pl-7 pt-2 font-default font-bold hover:text-cyan-500 transition-all duration-200"
+                        className="text-2xl pl-7 pt-2 font-sans font-bold hover:text-cyan-500 transition-all duration-200"
                     >
                         Home
                     </Link>
