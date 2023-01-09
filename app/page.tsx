@@ -147,7 +147,7 @@ export default function Page() {
                         World Map
                     </a>
                     <a
-                        href="https://www.youtube.com/@alivesmp"
+                        href="https://www.youtube.com/@alivegaming."
                         className="block p-3 m-5 w-56 bg-[#ff0000] rounded-xl hover:translate-y-1 active:scale-[0.99] transition-all duration-200 hover:bg-[#1f1f1f]"
                         target="_blank"
                     >
