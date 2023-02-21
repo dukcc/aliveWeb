@@ -97,9 +97,6 @@ export default function Page() {
                             - Universal dyeing, sandstone dyeing <br />
                             - Straight to shapeless <br />
                             - Charcoal & coal to black dye <br />
-                            - Unlock All Recipes <br />
-                            - Villager Workstation Highlights <br />- Wandering
-                            Trades
                         </p>
                     </div>
                     <div className="">
@@ -112,7 +109,8 @@ export default function Page() {
                         </a>
                         <p className="text-[25px] font-light">
                             - Terralith (overworld) <br />
-                            - Incendium (nether) <br />- Nullscape (end)
+                            - Incendium (nether) <br />
+                            - Nullscape (end)
                         </p>
                     </div>
                 </div>
