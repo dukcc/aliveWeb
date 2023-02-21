@@ -11,7 +11,7 @@ export default function Page() {
                         loop
                     ></video>
                 </div>
-                <div className="video-content space-y-2">
+                <div className="video-content space-y-2 mb-36">
                     <h1 className="text-[200px] font-bold text-transparent bg-clip-text max-[690px]:text-[120px] bg-gradient-to-br from-[#4DC0FF] to-[#078FFF] block">
                         Alive
                     </h1>
@@ -25,9 +25,9 @@ export default function Page() {
                 <p className="text-[25px] font-light pb-[61px]">
                     At Alive Media I create entertaining Minecraft gaming
                     content on the Twitch channel dukcccc. Every 2 weeks Alive
-                    Media creates a highlight of the Twitch content and uploads
-                    it to the YouTube channel @dukc0. <br /> <br /> Minecraft
-                    hardcore streams (no totem) - every Saturday and Sunday{" "}
+                    Media creates a highlight of the <a href="https://www.twitch.tv/dukcccc" target="_blank" className="underline">Twitch</a> content and uploads
+                    it to the YouTube channel <a href="https://www.youtube.com/@dukc0" target="_blank" className="underline">@dukc0</a>. <br /> <br />
+                    Minecraft hardcore streams - every Saturday and Sunday{" "}
                     <br />
                     Alive City building streams (creative) - every Wednesday
                 </p>
@@ -50,16 +50,16 @@ export default function Page() {
                             Vanilla Tweaks Datapacks:
                         </a>
                         <p className="text-[25px] font-light">
-                            - Armor Statues <br />
+                            - Armor statues <br />
                             - Coords HUD <br />
-                            - Custom Nether Portals <br />
-                            - Double Shulker <br />
-                            - More Mob Heads <br />
-                            - Nether Portal Coords <br />
-                            - Silence Mobs <br />
-                            - Unlock All Recipes <br />
-                            - Villager Workstation Highlights <br />- Wandering
-                            Trades
+                            - Custom nether portals <br />
+                            - Double shulker <br />
+                            - More mob heads <br />
+                            - Nether portal coords <br />
+                            - Silence mobs <br />
+                            - Unlock all recipes <br />
+                            - Villager workstation highlights <br />
+                            - Wandering trades
                         </p>
                     </div>
                     <div className="">
@@ -71,13 +71,13 @@ export default function Page() {
                             Crafting Tweaks Datapacks:
                         </a>
                         <p className="text-[25px] font-light">
-                            - Armor Statues <br />
-                            - Coords HUD <br />
-                            - Custom Nether Portals <br />
-                            - Double Shulker <br />
-                            - More Mob Heads <br />
-                            - Nether Portal Coords <br />
-                            - Silence Mobs <br />
+                            - Unpackable wool, & ice <br />
+                            - Craftable name tags, coral blocks, & blackstone <br />
+                            - More bark, trapdoors, stairs, & bricks <br />
+                            - Blackstone cobblestone <br />
+                            - Universal dyeing, sandstone dyeing <br />
+                            - Straight to shapeless <br />
+                            - Charcoal & coal to black dye <br />
                             - Unlock All Recipes <br />
                             - Villager Workstation Highlights <br />- Wandering
                             Trades
