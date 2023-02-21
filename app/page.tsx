@@ -18,15 +18,33 @@ export default function Page() {
                     <h4 className="text-[50px]">Gaming Group</h4>
                 </div>
             </section>
-            <section id="media" className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]">
+            <section
+                id="media"
+                className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]"
+            >
                 <h1 className="text-[100px] font-bold pb-[61px] text-transparent max-[690px]:text-[70px] bg-clip-text bg-gradient-to-br from-[#4DC0FF] to-[#078FFF] block">
                     Alive Media
                 </h1>
                 <p className="text-[25px] font-light pb-[61px]">
                     At Alive Media I create entertaining Minecraft gaming
-                    content on the Twitch channel dukcccc. Every 2 weeks Alive
-                    Media creates a highlight of the <a href="https://www.twitch.tv/dukcccc" target="_blank" className="underline">Twitch</a> content and uploads
-                    it to the YouTube channel <a href="https://www.youtube.com/@dukc0" target="_blank" className="underline">@dukc0</a>. <br /> <br />
+                    content on the Twitch channel{" "}
+                    <a
+                        href="https://www.twitch.tv/dukcccc"
+                        target="_blank"
+                        className="underline"
+                    >
+                        dukcccc
+                    </a>
+                    . Every 2 weeks Alive Media creates a highlight of the
+                    Twitch content and uploads it to the YouTube channel{" "}
+                    <a
+                        href="https://www.youtube.com/@dukc0"
+                        target="_blank"
+                        className="underline"
+                    >
+                        @dukc0
+                    </a>
+                    . <br /> <br />
                     Minecraft hardcore streams - every Saturday and Sunday{" "}
                     <br />
                     Alive City building streams (creative) - every Wednesday
@@ -58,8 +76,8 @@ export default function Page() {
                             - Nether portal coords <br />
                             - Silence mobs <br />
                             - Unlock all recipes <br />
-                            - Villager workstation highlights <br />
-                            - Wandering trades
+                            - Villager workstation highlights <br />- Wandering
+                            trades
                         </p>
                     </div>
                     <div className="">
@@ -72,7 +90,8 @@ export default function Page() {
                         </a>
                         <p className="text-[25px] font-light">
                             - Unpackable wool, & ice <br />
-                            - Craftable name tags, coral blocks, & blackstone <br />
+                            - Craftable name tags, coral blocks, & blackstone{" "}
+                            <br />
                             - More bark, trapdoors, stairs, & bricks <br />
                             - Blackstone cobblestone <br />
                             - Universal dyeing, sandstone dyeing <br />
@@ -98,8 +117,11 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-			<hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
-            <section id="media" className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]">
+            <hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
+            <section
+                id="media"
+                className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]"
+            >
                 <h1 className="text-[100px] font-bold pb-[61px] text-transparent max-[690px]:text-[70px] bg-clip-text bg-gradient-to-br from-[#4DC0FF] to-[#078FFF] block">
                     Alive City
                 </h1>
@@ -114,27 +136,72 @@ export default function Page() {
                     highly encouraged to have plants on your buildings. Gas cars
                     are banned, and the rest of the power grid is powered by a
                     solar and wind farm far outside of the valley.
-					<br /> <br />
-					View the building process on <a href="https://www.twitch.tv/dukcccc" target="_blank" className="underline">Twitch</a>, and highlights/timelapses on <a href="https://www.youtube.com/@dukc0" target="_blank" className="underline">YouTube</a>. <br />
-					Built in Minecraft creative 1.14.4, with world edit, and using <a href="https://cubed.community/texturepack/" target="_blank" className="underline">Cubed Pack</a>. <br />
-					Custom world made with <a href="https://www.worldpainter.net/" target="_blank" className="underline">Worldpainter</a>.
-					<br /> <br />
-					View the Google Doc, full with all the inspiration and plans <a href="https://docs.google.com/document/d/1DBUbqnyhlIRg2SAnMq3Q9TKBcUDeoyxfySVRvgm7CX8/edit?usp=sharing" target="_blank" className="underline">here</a>.
+                    <br /> <br />
+                    View the building process on{" "}
+                    <a
+                        href="https://www.twitch.tv/dukcccc"
+                        target="_blank"
+                        className="underline"
+                    >
+                        Twitch
+                    </a>
+                    , and highlights/timelapses on{" "}
+                    <a
+                        href="https://www.youtube.com/@dukc0"
+                        target="_blank"
+                        className="underline"
+                    >
+                        YouTube
+                    </a>
+                    . <br />
+                    Built in Minecraft creative 1.14.4, with world edit, and
+                    using{" "}
+                    <a
+                        href="https://cubed.community/texturepack/"
+                        target="_blank"
+                        className="underline"
+                    >
+                        Cubed Pack
+                    </a>
+                    . <br />
+                    Custom world made with{" "}
+                    <a
+                        href="https://www.worldpainter.net/"
+                        target="_blank"
+                        className="underline"
+                    >
+                        Worldpainter
+                    </a>
+                    .
+                    <br /> <br />
+                    View the Google Doc, full with all the inspiration and plans{" "}
+                    <a
+                        href="https://docs.google.com/document/d/1DBUbqnyhlIRg2SAnMq3Q9TKBcUDeoyxfySVRvgm7CX8/edit?usp=sharing"
+                        target="_blank"
+                        className="underline"
+                    >
+                        here
+                    </a>
+                    .
                 </p>
             </section>
-			<hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
-            <section id="media" className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]">
+            <hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
+            <section
+                id="media"
+                className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]"
+            >
                 <h1 className="text-[100px] font-bold pb-[61px] text-transparent max-[690px]:text-[70px] max-[490px]:text-[50px] bg-clip-text bg-gradient-to-br from-[#4DC0FF] to-[#078FFF] block">
                     Alive Resources
                 </h1>
                 <p className="text-[25px] font-light pb-[61px]">
-					A minimal Minecraft resourcepack, that tweaks the textures, adds some more useful building blocks and changes the GUI.
+                    A minimal Minecraft resourcepack, that tweaks the textures,
+                    adds some more useful building blocks and changes the GUI.
                 </p>
-				<h2 className="text-[50px] font-normal pb-[61px]">
+                <h2 className="text-[50px] font-normal pb-[61px]">
                     Downloads:
                 </h2>
-				<p className="text-[25px] font-light pb-[61px]">
-					Haven't been released yet.
+                <p className="text-[25px] font-light pb-[61px]">
+                    Haven't been released yet.
                 </p>
             </section>
         </>
