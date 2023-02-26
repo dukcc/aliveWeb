@@ -62,7 +62,7 @@ export default function Page() {
                     <b>Mods:</b>
                 </p>
                 <div className="flex flex-wrap pb-20">
-                    <ul className="list-disc ml-6 text-[25px] mr-96 underline font-light">
+                    <ul className="list-disc ml-6 text-[25px] mr-80 underline font-light">
                         <li><a href="https://modrinth.com/mods?q=3d%20sk" target={"_blank"}>3D Skin Layers</a></li>
                         <li><a href="https://modrinth.com/mod/another-furniture" target={"_blank"}>Another Furniture</a></li>
                         <li><a href="https://modrinth.com/mod/architectury-api" target={"_blank"}>Architectury API</a></li>
@@ -81,7 +81,7 @@ export default function Page() {
                         <li><a href="https://modrinth.com/mod/essential" target={"_blank"}>Essential</a></li>
                         <li><a href="https://modrinth.com/mod/extractinator" target={"_blank"}>Extractinator</a></li>
                     </ul>
-                    <ul className="list-disc ml-6 text-[25px] mr-96 underline font-light">
+                    <ul className="list-disc ml-6 text-[25px] mr-80 underline font-light">
                         <li><a href="https://modrinth.com/mod/farmers-delight" target={"_blank"}>Farmer's Delight</a></li>
                         <li><a href="https://modrinth.com/mod/fastload" target={"_blank"}>Fastload</a></li>
                         <li><a href="https://modrinth.com/mod/ferrite-core" target={"_blank"}>FerriteCore</a></li>
