@@ -61,7 +61,7 @@ export default function Page() {
                     <b>Seed:</b> -8809820003186613556 <br />
                     <b>Mods:</b>
                 </p>
-                <div className="flex flex-wrap pb-20">
+                <div id="modlist" className="flex flex-wrap pb-20">
                     <ul className="list-disc ml-6 text-[25px] mr-80 underline font-light">
                         <li><a href="https://modrinth.com/mods?q=3d%20sk" target={"_blank"}>3D Skin Layers</a></li>
                         <li><a href="https://modrinth.com/mod/another-furniture" target={"_blank"}>Another Furniture</a></li>
@@ -125,7 +125,7 @@ export default function Page() {
             </section>
             <hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
             <section
-                id="media"
+                id="city"
                 className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px] flex flex-wrap place-content-between"
             >
                 <div className="w-[50vw]">
@@ -196,7 +196,7 @@ export default function Page() {
             </section>
             <hr className="border-2 border-white/5 mx-[122px] max-[640px]:mx-[61px]" />
             <section
-                id="media"
+                id="resources"
                 className="px-[122px] py-[122px] max-[640px]:px-[61px] max-[640px]:py-[61px]"
             >
                 <h1 className="text-[100px] font-bold pb-[61px] text-transparent max-[690px]:text-[70px] max-[490px]:text-[50px] bg-clip-text bg-gradient-to-br from-[#4DC0FF] to-[#078FFF] block">
