@@ -14,12 +14,14 @@ export default function RootLayout({
                     <Image src={"/logo.png"} alt={"Alive Logo"} width={"41"} height={"41"} />
                 </nav>
                 {children}
-                <footer className="bg-[#131619] p-[122px] max-[640px]:p-[61px]">
-                    <Image src={"/logo.png"} className="inline mr-[50px] mb-[50px]" alt={"Alive Logo"} width={"94"} height={"94"} />
-                    <Image src={"/duckyhq.png"} className="inline mb-[50px]" alt={"Alive Logo"} width={"94"} height={"94"} />
-                    <p className="text-[20px] font-light">
-                        Alive - &copy; <a href="https://www.duckyhq.com" target="_blank" className="underline">DuckyHQ</a> 2023 <br />
-                        Brand & Website created by <a href="https://www.duckyhq.com" target="_blank" className="underline">DuckyHQ</a>
+                <footer className="bg-[#131619] p-[122px] max-[640px]:p-[61px] flex place-content-between flex-wrap">
+                    <div>
+                        <Image src={"/logo.png"} className="inline mr-[50px]" alt={"Alive Logo"} width={"94"} height={"94"} />
+                        <Image src={"/duckyhq.png"} className="inline" alt={"Alive Logo"} width={"94"} height={"94"} />
+                    </div>
+                    <p className="text-[20px] font-light text-right pt-5 max-[843px]:text-left">
+                        Alive - &copy; <a href="https://www.duckyhq.com" target={"_blank"} className="underline">DuckyHQ</a> 2023 <br />
+                        Brand & website created by <a href="https://www.duckyhq.com" target={"_blank"} className="underline">DuckyHQ</a>
                     </p>
                 </footer>
             </body>
